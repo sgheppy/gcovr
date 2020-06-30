@@ -394,6 +394,7 @@ def _make_short_sourcename(output_file, filename):
         output_prefix = output_file
         output_suffix = 'html'
 
+    filename.replace(os.sep, '/')
     sourcename = '.'.join((output_prefix,
                            os.path.basename(filename),
                            hashlib.md5(filename.encode('utf-8')).hexdigest(),
